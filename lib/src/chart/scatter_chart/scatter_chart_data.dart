@@ -278,6 +278,7 @@ class ScatterTouchData extends FlTouchData<ScatterTouchResponse>
     BaseTouchCallback<ScatterTouchResponse>? touchCallback,
     MouseCursorResolver<ScatterTouchResponse>? mouseCursorResolver,
     Duration? longPressDuration,
+    bool? ignoreTapAndPanGesture,
     ScatterTouchTooltipData? touchTooltipData,
     double? touchSpotThreshold,
     bool? handleBuiltInTouches,
@@ -289,6 +290,7 @@ class ScatterTouchData extends FlTouchData<ScatterTouchResponse>
           touchCallback,
           mouseCursorResolver,
           longPressDuration,
+          ignoreTapAndPanGesture,
         );
 
   /// show a tooltip on touched spots
@@ -308,6 +310,7 @@ class ScatterTouchData extends FlTouchData<ScatterTouchResponse>
     BaseTouchCallback<ScatterTouchResponse>? touchCallback,
     MouseCursorResolver<ScatterTouchResponse>? mouseCursorResolver,
     Duration? longPressDuration,
+    bool? ignoreTapAndPanGesture,
     ScatterTouchTooltipData? touchTooltipData,
     double? touchSpotThreshold,
     bool? handleBuiltInTouches,
@@ -317,6 +320,7 @@ class ScatterTouchData extends FlTouchData<ScatterTouchResponse>
         touchCallback: touchCallback ?? this.touchCallback,
         mouseCursorResolver: mouseCursorResolver ?? this.mouseCursorResolver,
         longPressDuration: longPressDuration ?? this.longPressDuration,
+        ignoreTapAndPanGesture: ignoreTapAndPanGesture ?? this.ignoreTapAndPanGesture,
         touchTooltipData: touchTooltipData ?? this.touchTooltipData,
         handleBuiltInTouches: handleBuiltInTouches ?? this.handleBuiltInTouches,
         touchSpotThreshold: touchSpotThreshold ?? this.touchSpotThreshold,
@@ -329,6 +333,7 @@ class ScatterTouchData extends FlTouchData<ScatterTouchResponse>
         touchCallback,
         mouseCursorResolver,
         longPressDuration,
+        ignoreTapAndPanGesture,
         touchTooltipData,
         touchSpotThreshold,
         handleBuiltInTouches,
